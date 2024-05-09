@@ -39,6 +39,26 @@ final class ConditionFilterFactory
         return self::create($field, FilterOperator::IN, $value);
     }
 
+    public static function createGt(string $field, mixed $value): ConditionFilter
+    {
+        return self::create($field, FilterOperator::GT, $value);
+    }
+
+    public static function createGte(string $field, mixed $value): ConditionFilter
+    {
+        return self::create($field, FilterOperator::GTE, $value);
+    }
+
+    public static function createLt(string $field, mixed $value): ConditionFilter
+    {
+        return self::create($field, FilterOperator::LT, $value);
+    }
+
+    public static function createLte(string $field, mixed $value): ConditionFilter
+    {
+        return self::create($field, FilterOperator::LTE, $value);
+    }
+
     public static function createNotIn(string $field, mixed $value): ConditionFilter
     {
         return self::create($field, FilterOperator::NOT_IN, $value);
