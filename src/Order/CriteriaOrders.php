@@ -29,6 +29,11 @@ final class CriteriaOrders
     {
     }
 
+    public function values(): array
+    {
+        return $this->values;
+    }
+
     public function add(CriteriaOrder $order): void
     {
         $this->values[] = $order;

@@ -16,6 +16,11 @@ final class Filters
     {
     }
 
+    public function values(): array
+    {
+        return $this->values;
+    }
+
     public function add(Filter $filter): void
     {
         $this->values[] = $filter;
