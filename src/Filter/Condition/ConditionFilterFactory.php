@@ -24,6 +24,16 @@ final class ConditionFilterFactory
         return self::create($field, FilterOperator::CONTAINS, $value);
     }
 
+    public static function createStartsWith(string $field, mixed $value): ConditionFilter
+    {
+        return self::create($field, FilterOperator::STARTS_WITH, $value);
+    }
+
+    public static function createEndsWith(string $field, mixed $value): ConditionFilter
+    {
+        return self::create($field, FilterOperator::ENDS_WITH, $value);
+    }
+
     public static function createIn(string $field, mixed $value): ConditionFilter
     {
         return self::create($field, FilterOperator::IN, $value);
