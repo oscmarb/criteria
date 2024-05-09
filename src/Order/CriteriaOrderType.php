@@ -12,6 +12,16 @@ final class CriteriaOrderType
         $this->assert();
     }
 
+    public function isAsc(): bool
+    {
+        return self::ASC === $this->value;
+    }
+
+    public function isDesc(): bool
+    {
+        return self::DESC === $this->value;
+    }
+
     public function value(): string
     {
         return $this->value;
